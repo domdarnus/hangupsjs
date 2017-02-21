@@ -54,5 +54,6 @@ module.exports = class ChatReq
     # request endpoint by submitting body. json toggles whether we want
     # the result as json or protojson
     req: (endpoint, body, json=true) ->
+        console.log"yes, i'm alive"
         url = "https://clients6.google.com/chat/v1/#{endpoint}"
         @baseReq url, 'application/json+protobuf', body, json
